@@ -1,0 +1,109 @@
+<!DOCTYPE>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Catalogo productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="m-4 text-center">
+        <h1>Productos</h1>
+        <h5>Categorias</h5>
+        <!-- <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Categorias
+            </button>
+            <ul class="dropdown-menu" id="filtre">
+                <li><a class="dropdown-item" href="#">Todas</a></li>
+                <li><a class="dropdown-item" href="#">Playeras</a></li>
+                <li><a class="dropdown-item" href="#">Pantalón</a></li>
+                <li><a class="dropdown-item" href="#">Calcetas</a></li>
+                <li><a class="dropdown-item" href="#">Sueter</a></li>
+            </ul>
+        </div> -->
+    </header>
+    <section>
+        <div class="container">
+
+            <div class="card-group" id="catalogo">
+                <!-- Aqui se insertan los productos -->
+            </div>
+
+        </div>
+    </section>
+    <!-- formulario para agregar productos -->
+    <section class="m-4 text-center">
+        <form>
+
+            <label for="nameProduct">Nombre: </label>
+            <input type="text" id="nameProduct">
+
+            <label for="price">Precio: </label>
+            <input type="number" id="price">
+
+            <label for="categorySelect">Categorias</label>
+            <select id="categorySelect">
+                <option value="Todos" selected>Todas</option>
+                <option value="1">Playera</option>
+                <option value="2">Pantalon</option>
+                <option value="3">Calcetas</option>
+                <option value="4">Sueter</option>
+            </select>
+
+
+            <button class="btn btn-outline-primary" id="btnGuardar">Guardar</button>
+        </form>
+    </section>
+
+    <!-- Modal edición -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1"">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Edición producto</h1>
+                    
+                </div>
+                <div class="modal-body">
+                    <label for="nameProductE">Nombre: </label>
+                    <input type="text" id="nameProductE">
+
+                    <label for="priceE">Precio: </label>
+                    <input type="number" id="priceE">
+
+                    <label for="categorySelectE">Categorias</label>
+                    <select id="categorySelectE">
+                        <option value="Todos" selected>Todas</option>
+                        <option value="1">Playera</option>
+                        <option value="2">Pantalon</option>
+                        <option value="3">Calcetas</option>
+                        <option value="4">Sueter</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-outline-primary" id="btnSaveEdit">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- alerta de campo incorecto -->
+    <div class="alert alert-danger d-none" role="alert" id="alertData">
+        Campo no valido.
+    </div>
+
+
+    <!-- libreria bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <sxript src="js/Firebase.js"></sxript>
+</body>
+
+</html>
